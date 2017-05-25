@@ -14,7 +14,7 @@ import java.util.Vector;
  */
 @Getter
 @Setter
-public class SOFM {
+public class SOFM implements Cloneable {
     @Setter(AccessLevel.NONE)
     private SOFMNet net;
     @Setter(AccessLevel.NONE)

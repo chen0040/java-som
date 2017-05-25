@@ -87,7 +87,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
 
-        <build.version>1.0-SNAPSHOT</build.version>
 
         <surefire.version>2.19</surefire.version>
         <failsafe.version>2.19.1</failsafe.version>
@@ -96,13 +95,6 @@
         <checkstyle.version>2.17</checkstyle.version>
         <pmd.version>3.5</pmd.version>
         <jacoco.version>0.7.3.201502191951</jacoco.version>
-
-        <fastjson.version>1.2.24</fastjson.version>
-        <guava.version>19.0</guava.version>
-
-        <commons-lang3.version>3.4</commons-lang3.version>
-        <commons-io.version>2.4</commons-io.version>
-        <commons-math.version>3.2</commons-math.version>
 
         <lombok.version>1.16.6</lombok.version>
     </properties>
@@ -506,7 +498,7 @@
         <dependency>
             <groupId>com.github.chen0040</groupId>
             <artifactId>java-data-frame</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.9</version>
         </dependency>
 
 

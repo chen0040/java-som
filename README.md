@@ -19,7 +19,7 @@ Add the following dependency to your POM file:
 
 ### Image Segmentation (Clustering) using SOFM
 
-The following sample code shows how to use FuzzyART to perform image segmentation:
+The following sample code shows how to use SOFM to perform image segmentation:
 
 ```java
 BufferedImage img= ImageIO.read(FileUtils.getResource("1.jpg"));

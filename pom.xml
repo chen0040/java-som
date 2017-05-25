@@ -502,6 +502,11 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>com.github.chen0040</groupId>
+            <artifactId>java-data-image</artifactId>
+            <version>1.0.1</version>
+        </dependency>
 
 
     </dependencies>

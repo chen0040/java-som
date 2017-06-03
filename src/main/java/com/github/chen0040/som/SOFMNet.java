@@ -63,20 +63,6 @@ public class SOFMNet {
 		return neurons.get(row * cols + col);
 	}
 
-	public void initialize(double[] weight_lower_bounds, double[] weight_upper_bounds)
-	{
-		Vector<Double> w1=new Vector<Double>();
-		for(int k=0; k<weight_lower_bounds.length; k++)
-		{
-			w1.add(new Double(weight_lower_bounds[k]));
-		}
-		Vector<Double> w2=new Vector<Double>();
-		for(int k=0; k < weight_upper_bounds.length; k++)
-		{
-			w2.add(new Double(weight_upper_bounds[k]));
-		}
-		this.initialize(w1, w2);
-	}
 	
 	public void initialize(Vector<Double> lowest_weight, Vector<Double> highest_weight)
 	{

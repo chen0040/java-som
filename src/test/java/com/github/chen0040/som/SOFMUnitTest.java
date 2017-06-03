@@ -57,5 +57,14 @@ public class SOFMUnitTest {
             segmented_image.setRGB(x, y, rgb);
          }
       }
+
+      SOFMNet net = cluster.getNet();
+      cluster.getDataNormalization();
+      cluster.getEta0();
+
+      for(SOFMNeuron n : net.getNeurons()){
+         System.out.println("(" + n.getX() + ", " + n.getY() + "): " + n.getOutput());
+      }
+
    }
 }

@@ -14,7 +14,7 @@ import java.util.Vector;
  */
 @Getter
 @Setter
-public class SOFM implements Cloneable {
+public class SOFM {
     @Setter(AccessLevel.NONE)
     private SOFMNet net;
     @Setter(AccessLevel.NONE)
@@ -24,18 +24,6 @@ public class SOFM implements Cloneable {
     private int columnCount = 5;
     private double eta0 = 0.1;
 
-    public void copy(SOFM that) throws CloneNotSupportedException {
-        net = that.net == null ? null : (SOFMNet)that.net.clone();
-        dataNormalization = that.dataNormalization == null ? null : (Standardization)that.dataNormalization.clone();
-    }
-
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        SOFM clone = (SOFM)super.clone();
-        clone.copy(this);
-
-        return clone;
-    }
 
     public SOFM(){
     }

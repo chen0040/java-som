@@ -12,7 +12,7 @@ import java.util.Vector;
 
 @Getter
 @Setter
-public class SOFMNet implements  Cloneable {
+public class SOFMNet {
 	private static final Random random = new Random();
 
 	private int rows;
@@ -27,29 +27,7 @@ public class SOFMNet implements  Cloneable {
 	@Setter(AccessLevel.NONE)
 	private final List<SOFMNeuron> neurons = new ArrayList<>();
 
-	public void copy(SOFMNet rhs) throws CloneNotSupportedException {
-		rows = rhs.rows;
-		cols = rhs.cols;
-		sigma0 = rhs.sigma0;
-		tau1 = rhs.tau1;
-		selfOrganizingPhaseEpoches = rhs.selfOrganizingPhaseEpoches;
-		epoches = rhs.epoches;
-		eta0 = rhs.eta0;
-		inputDimension = rhs.inputDimension;
-		neurons.clear();
 
-		for(int i=0; i < rhs.neurons.size(); ++i){
-			neurons.add((SOFMNeuron)rhs.neurons.get(i).clone());
-		}
-	}
-
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		SOFMNet clone = (SOFMNet)super.clone();
-		clone.copy(this);
-
-		return clone;
-	}
 
 	public SOFMNet(){
 

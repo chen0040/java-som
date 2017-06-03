@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SOFMNeuron implements Cloneable {
+public class SOFMNeuron {
 	private int x;
 	private int y;
 	private int output;
@@ -36,22 +36,6 @@ public class SOFMNeuron implements Cloneable {
 		double dy=rhs.y - y;
 		return Math.sqrt(dx*dx + dy*dy);
 	}
-
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		SOFMNeuron clone = (SOFMNeuron)super.clone();
-		clone.copy(this);
-
-		return clone;
-	}
-
-	public void copy(SOFMNeuron rhs){
-		x = rhs.x;
-		y = rhs.y;
-		output = rhs.output;
-		weights = rhs.weights==null ? null : rhs.weights.clone();
-	}
-
 
 	public void updateWeight(int j, double weight) {
 		this.weights[j]  = weight;

@@ -37,6 +37,17 @@ public class SOFM {
         return winner.getOutput();
     }
 
+    public DataFrame fitAndTransform(DataFrame dataFrame) {
+        dataFrame = dataFrame.makeCopy();
+        fit(dataFrame);
+        for(int i = 0; i < dataFrame.rowCount(); ++i) {
+            DataRow row = dataFrame.row(i);
+            int clusterId = transform(row);
+            row.setCategoricalTargetCell("cluster", "" + clusterId);
+        }
+        return dataFrame;
+    }
+
     public void fit(DataFrame batch) {
 
         int dimension = batch.row(0).toArray().length;
